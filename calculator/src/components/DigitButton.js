@@ -1,10 +1,13 @@
 import React from "react"
 
 const DigitButton = (props) => {
+    
+
+
     return (
-        <div id={props.id}>
+        <button id={props.id} onClick={() => props.handleClick(props.button, props.id)}>
             {props.button}
-        </div>
+        </button>
     )
 }
 
