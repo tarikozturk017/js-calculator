@@ -1,11 +1,11 @@
-import React from "react"
+import { ACTIONS } from "../App"
 
-const OperationButton = (props) => {
+export default function OperationButton({id, dispatch, operation }) {
     return (
-        <button id={props.id} onClick={() => props.handleClick(props.sign, props.id)}>
-            {props.sign}
-        </button>
+    <button 
+        id={id} onClick={() => dispatch({ type: ACTIONS.CHOOSE_OPERATION, payload: { operation } })}
+    >
+        {operation}
+    </button>
     )
 }
-
-export default OperationButton
